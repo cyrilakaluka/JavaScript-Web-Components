@@ -13,29 +13,12 @@ class IconButton extends HTMLElement {
     }
 
     connectedCallback() {
-        const dataButton = this.dataset.button;
-        let context = {};
+        const dataIcon = this.dataset.icon;
 
-        switch (dataButton) {
-            case "save":
-                context = {
-                    icon: IconButton.supportedIcons.save,
-                    text: "Save Changes",
-                };
-                break;
-            case "view-more":
-                context = {
-                    icon: IconButton.supportedIcons.book,
-                    text: "View More",
-                };
-                break;
-            case "remove":
-                context = {
-                    icon: IconButton.supportedIcons["trash-bin"],
-                    text: "Remove Item",
-                };
-                break;
-        }
+        const context = {
+            icon: IconButton.supportedIcons[dataIcon],
+            variant: this.dataset.variant
+        };
 
         this.shadowRoot.innerHTML = template(context);
     }
