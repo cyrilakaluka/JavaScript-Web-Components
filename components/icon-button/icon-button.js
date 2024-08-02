@@ -1,4 +1,5 @@
 import template from "./template.js";
+import style from "./style.js";
 
 class IconButton extends HTMLElement {
     static supportedIcons = {
@@ -20,7 +21,7 @@ class IconButton extends HTMLElement {
             variant: this.dataset.variant
         };
 
-        this.shadowRoot.innerHTML = template(context);
+        this.shadowRoot.innerHTML = style(context) + template(context);
     }
 }
 
