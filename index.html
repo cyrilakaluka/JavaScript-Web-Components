@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Styled Table with Web Components</title>
+    <title>Web Components</title>
     <script type="module" src="./index.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -21,10 +21,15 @@
     <!-- <styled-table id="user-table" data-headers="ID,Username,Country"></styled-table> -->
     <!-- <progress-bar id="progress-bar" progress="40"></progress-bar> -->
     <!-- <x-counter></x-counter> -->
-    <div style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- <div style="display: flex; flex-direction: column; gap: 20px;">
         <icon-button data-icon="book" data-variant="info">View More</icon-button>
         <icon-button data-icon="save" data-variant="success">Save Changes</icon-button>
         <icon-button data-icon="trash-bin" data-variant="error">Remove</icon-button>
+    </div> -->
+    <div style="display: flex; flex-direction: column; align-items:start; gap: 20px;">
+        <search-bar id="search" data-placeholder="Search"></search-bar>
+        <search-bar id="search-products" data-placeholder="Search Products"></search-bar>
+        <search-bar id="find-user" data-placeholder="Find a User..."></search-bar>
     </div>
 </body>
 
